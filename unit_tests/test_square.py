@@ -1,4 +1,4 @@
-import square
+import utils.square as square
 from unittest.mock import patch
 
 def test_square(capsys):
@@ -19,8 +19,8 @@ def test_square(capsys):
 def test_square_invalid_input(capsys):
     # Simulate user input of "abc" (invalid) and "4" (valid)
     user_inputs = ["abc\n", "4\n"]
-    expected_output = "Error: Your input was not an integer number!\n" \
-                      "The square of 4 = 16\n"
+    expected_output = "Error: Your input is not a number!\n" \
+                        "The square of 4 = 16\n"
 
     # Patch the 'input' function to return the user inputs
     with patch('builtins.input', side_effect=user_inputs):
