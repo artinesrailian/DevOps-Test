@@ -4,3 +4,6 @@ main.spec
 
 # Ignore cache directories
 *cache*
+
+# Ignore vscode related files and directories
+.vscode/

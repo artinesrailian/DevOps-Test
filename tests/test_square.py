@@ -1,4 +1,4 @@
-import square
+import utils.square as square
 from unittest.mock import patch
 
 def test_square(capsys):
