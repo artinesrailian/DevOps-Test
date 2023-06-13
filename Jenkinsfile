@@ -14,7 +14,7 @@ pipeline{
         stage("Unit Test") {
             steps {
                 echo("Running unit tests")
-                sh("pipenv run python.exe -m pytest")
+                sh("pipenv run python3 -m pytest")
             }
         }
         stage("Build the project") {
