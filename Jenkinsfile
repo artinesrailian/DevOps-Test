@@ -30,7 +30,7 @@ pipeline{
         stage("Upload the release to Github") {
             steps {
                 echo("Running the script which uploads the release to Github")
-                sh("./release.sh")
+                sh("echo ./release.sh")
             }
         }
     }
