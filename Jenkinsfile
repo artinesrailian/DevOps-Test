@@ -20,7 +20,7 @@ pipeline{
         stage("Build the project") {
             steps {
                 echo("Building the project")
-                sh("pipenv run pyinstaller main.py --onefile")
+                sh("pipenv run pyinstaller main.py --onefile -y")
             }
         }
         stage("Pacakge the artifact") {
