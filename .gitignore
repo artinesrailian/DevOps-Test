@@ -1,0 +1,3 @@
+# Ignore build directory and main.spec which are auto-generated when using pyinstaller
+build/
+main.spec
