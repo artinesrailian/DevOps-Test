@@ -22,6 +22,8 @@ pipeline{
                 echo("Building the project")
                 sh("pipenv run pyinstall main.py --onefile")
             }
+        }
+        stage("Pacakge the artifact") {
             steps {
                 echo("Create the build artifact")
                 sh("tar -czf DevOps-test.tar.gz dist/main.exe")
