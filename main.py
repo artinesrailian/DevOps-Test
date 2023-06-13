@@ -1,5 +1,4 @@
-user_num = int(input("Please insert a number: "))
-square = user_num ** 2
-
-print(f"The square of {user_num} = {square}")
-input("")
+import square
+# This is the main application which calls the square function
+square.square()
+input("Press 'Enter' key to exit ...")
