@@ -35,6 +35,7 @@ pipeline{
             }
             steps {
                 echo("Running the script which uploads the release to Github")
+                sh "pwd && ls -la"
                 sh "./release.sh"
             }
         }
