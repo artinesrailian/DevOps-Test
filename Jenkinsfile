@@ -8,25 +8,25 @@ pipeline{
             // Have pipenv create a virtualenv and download all the required dependencies before running the test and release
             steps {
                 echo("Run pipenv install to create python virtualenv with all dependencies")
-                sh("pipenv install")
+                sh "pipenv install"
             }
         }
         stage("Unit Test") {
             steps {
                 echo("Running unit tests")
-                sh("pipenv run python3 -m pytest")
+                sh "pipenv run python3 -m pytest"
             }
         }
         stage("Build the project") {
             steps {
                 echo("Building the project")
-                sh("pipenv run pyinstaller main.py --onefile -y")
+                sh "pipenv run pyinstaller main.py --onefile -y"
             }
         }
         stage("Pacakge the artifact") {
             steps {
                 echo("Create the build artifact")
-                sh("tar -czf DevOps-test.tar.gz dist/main.exe")
+                sh "tar -czf DevOps-test.tar.gz dist/main.exe"
             }
         }
         stage("Upload the release to Github") {
@@ -35,7 +35,7 @@ pipeline{
             }
             steps {
                 echo("Running the script which uploads the release to Github")
-                sh("./release.sh")
+                sh "./release.sh"
             }
         }
     }
