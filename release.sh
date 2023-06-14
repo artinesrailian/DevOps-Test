@@ -1,4 +1,5 @@
 #!/bin/bash
+set -x
 
 # Variables
 GITHUB_REPO="artinesrailian/DevOps-Test"
