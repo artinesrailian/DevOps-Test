@@ -28,6 +28,6 @@ Once the command has finished running, you are ready to launch the `virtualenv` 
 
 From now on you can run the application by running `python main.py`
 
-To run the PyTests run `python.exe -m pytest`
+To run the PyTests run `python -m pytest`
 
 To build the project run `pyinstaller main.py --onefile`
