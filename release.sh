@@ -15,6 +15,7 @@ curl --request POST \
   --header "Authorization: token $GITHUB_TOKEN" \
   --header "Content-Type: application/json" \
   --data '{
+    "tag_name": "dummy",
     "name": "'"$RELEASE_NAME"'",
     "body": "'"$RELEASE_NOTES"'",
     "draft": false,
