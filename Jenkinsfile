@@ -30,9 +30,12 @@ pipeline{
             }
         }
         stage("Upload the release to Github") {
+            environment {
+                GITHUB-TOKEN = credentials('github-token')
+            }
             steps {
                 echo("Running the script which uploads the release to Github")
-                sh("echo ./release.sh")
+                sh("./release.sh")
             }
         }
     }
